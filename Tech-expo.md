@@ -4,7 +4,7 @@ We are Qualis Labs and our project name was Qualis Vision.
 
 2. **Why that name?**
 
-Qualis is a latin word which means *bora* in swahili. We try and help improve the living standards of people in every project we undertake.
+Qualis is a Latin word which means *bora* in Swahili. We try and help improve the living standards of people in every project we undertake.
 
 3. **What is the project about? Kindly describe it.**
 
@@ -18,7 +18,7 @@ Qualis Vision is project aimed at improving the quality of life of the visually 
 
 4. **What inspired your idea?**
 
-Many innovations aren't focused on the physically challenged in the society but rather on the physically abled. While we were at a friend's house, we found out that one of our friends had a cousin who got blind because of an ailment. We started brainstorming how we could help her regain her sight back. To a common person this seems rather an absurd idea. But we took up the challenge. The fact that Google has been helping people who lose voice by Neurological voice disorders gave us confidence that our journey might bear fruits. For over the start of the fourth industrial revolution, Artificial Intelligence has been a crucial research topic. Artificial Intelligence was first observed experimentally on Star Wars. So we thought we could use AI to help people regain their sight by having an assistant who could look at their surroundings and interpret.
+Many innovations aren't focused on the physically challenged in the society but rather on the physically abled. One touching story over lunch was the genesis of the Qualis Vision journey and we agree that it has been a rollercoaster. Our colleague, Washington has a cousin whom after falling ill became blind. At that tender age of 11, she first had to suspend her studies and begin learning braille in order to continue with her education. It was and still is a very tasking thing for her to do. When Washington first shared her story we thought of how unfair that incident was. Her entire life took an abrupt turn. This story inspired us to brainstorm on how to improve her life using technology we have today. To a common person this seems rather an absurd idea. But we took up the challenge. The fact that Google has been helping people who lose voice by Neurological voice disorders gave us confidence that our journey might bear fruits. For over the start of the fourth industrial revolution, Artificial Intelligence has been a crucial research topic. Artificial Intelligence was first observed experimentally on Star Wars. So we thought we could use AI to help people regain their sight by having an assistant who could look at their surroundings and interpret.
 
 5. **What was going through your mind as you developed your project? Any challenges? If any kindly mention one or two**
 
@@ -30,7 +30,7 @@ We achieved first place in the Tech Expo. This was a great achievement on our pa
 
 7. **Any future plans for your project?**
 
-Yes, from the Tech Expo we have had increasing demand to test our product and get it to the market. It is now our core intent to come up with a fully fledged device that is industry standard which we can roll out for testing purposes.
+Owing to our success in the Tech Expo we have had increasing demand to test our product and get it to the market. It is now our core intent to come up with a fully-fledged device that is industry standard which we can roll out for testing purposes.
 
 8. **Advice to those thinking about participating in Tech Expo**
 
@@ -46,4 +46,4 @@ Have a big proponent of sharing ideas to receive initial feedback and enrich sta
 Have the spirit to constantly try new tactics to see what fits. Not having enough focus means that valuable time goes in debating the right strategy without actually trying anything. 
 
 #### 3 Building a team culture that includes everyone
-Emphasise the need for a strong company culture that created a sense of ownership, inclusion and empowerment. We believe in the mantra ‘culture is caught and not taught’. 
+Emphasise the need for a strong company culture that creates a sense of ownership, inclusion and empowerment. We believe in the mantra ‘culture is caught and not taught’. 
