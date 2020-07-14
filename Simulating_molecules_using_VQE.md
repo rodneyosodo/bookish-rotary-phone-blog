@@ -6,4 +6,4 @@
 
 ## INTRODUCTION
 Fundamentally light was believed to be a wave. But Albert Einsten found out that light consisted of photons called quanta which have energy determines by its frequency. Photons of vissible light can be absorbed by an electron thereby causing the electron to moce from a low energy orbital to a high energy orbital.
-Determining these properties is difficult for a classical computer since the electrons may be highly enetangled. To accurately model this we require high computational power. This is where quantum cmputers come in play. 
+Determining these properties is difficult for a classical computer since the electrons may be highly enetangled. To accurately model this we require high computational power. This is where quantum cmputers come in play. They are more efficient at handling entanglement compared to classical computers.
