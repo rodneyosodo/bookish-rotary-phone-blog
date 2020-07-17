@@ -11,3 +11,5 @@ Determining these properties is difficult for a classical computer since the ele
 
 ## THEORY
 The variational principle explains how the energy of any trial wave function is greater than or equal to the exact ground state energy of the systme.
+
+We find the fermionic operator first and map the fermionic hamiltonians to qubit hamiltonians. 
