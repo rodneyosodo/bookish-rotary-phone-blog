@@ -15,3 +15,4 @@ The variational principle explains how the energy of any trial wave function is 
 We find the fermionic operator first and map the fermionic hamiltonians to qubit hamiltonians. For this transformation we use
 1. Jordan Wigner transformation leads to N-local hamiltonians
 2. Bravyi-Kotoev transformation leads to log(N) local hamiltonians
+3. Partity transformation
