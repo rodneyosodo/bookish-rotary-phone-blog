@@ -16,3 +16,5 @@ We find the fermionic operator first and map the fermionic hamiltonians to qubit
 1. Jordan Wigner transformation leads to N-local hamiltonians
 2. Bravyi-Kotoev transformation leads to log(N) local hamiltonians
 3. Partity transformation
+
+It is important to find the minimum eigen value of a matrix, in Chemistry the minimum eigen value of a Hermitian matrix is the ground state energy. 
