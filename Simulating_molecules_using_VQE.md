@@ -22,3 +22,5 @@ By applying a parameterized circuit represented by U(0) to some state |U> the ou
 The estimate is optimized by a classical optimizer changing the parameters thus minimizinf the expectation value of 
 This is the variational principle.
 > Hermitian matrix is equal to its own conjugate transpose
+> By Spectral theorem the expectation value of the Hernitian matrix must be real and any expectation value has the property 
+
