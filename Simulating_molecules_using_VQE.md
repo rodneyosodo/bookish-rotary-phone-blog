@@ -21,3 +21,4 @@ It is important to find the minimum eigen value of a matrix, in Chemistry the mi
 By applying a parameterized circuit represented by U(0) to some state |U> the outputs is 
 The estimate is optimized by a classical optimizer changing the parameters thus minimizinf the expectation value of 
 This is the variational principle.
+> Hermitian matrix is equal to its own conjugate transpose
