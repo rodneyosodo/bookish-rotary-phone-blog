@@ -24,3 +24,4 @@ This is the variational principle.
 > Hermitian matrix is equal to its own conjugate transpose
 > By Spectral theorem the expectation value of the Hernitian matrix must be real and any expectation value has the property 
 
+The expectation value corresponding to the Hermitian matrix to an arbitary state is geiven by
