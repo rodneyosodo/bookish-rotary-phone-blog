@@ -26,4 +26,4 @@ This is the variational principle.
 
 The expectation value corresponding to the Hermitian matrix to an arbitary state is geiven by
 
-Expectation value of any wave function will be atleast the 
+Expectation value of any wave function will be atleast the minimum eigen value associated with the wave function.
