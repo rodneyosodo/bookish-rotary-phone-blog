@@ -25,3 +25,5 @@ This is the variational principle.
 > By Spectral theorem the expectation value of the Hernitian matrix must be real and any expectation value has the property 
 
 The expectation value corresponding to the Hermitian matrix to an arbitary state is geiven by
+
+Expectation value of any wave function will be atleast the 
