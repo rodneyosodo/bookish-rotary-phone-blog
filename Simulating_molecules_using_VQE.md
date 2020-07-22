@@ -30,3 +30,4 @@ Expectation value of any wave function will be atleast the minimum eigen value a
 The ground state of the Hamiltonian system is the smallest eigen value associated with the Hermitian matrix.
 
 ## VQE
+The ideal approach in varrying your ansatz is to use a parametrized circuit with a fixed form.
