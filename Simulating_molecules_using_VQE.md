@@ -31,3 +31,4 @@ The ground state of the Hamiltonian system is the smallest eigen value associate
 
 ## VQE
 The ideal approach in varrying your ansatz is to use a parametrized circuit with a fixed form.
+The circuit is represented by a linear transform. 
