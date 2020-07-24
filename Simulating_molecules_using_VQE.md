@@ -32,4 +32,4 @@ The ground state of the Hamiltonian system is the smallest eigen value associate
 ## VQE
 The ideal approach in varrying your ansatz is to use a parametrized circuit with a fixed form.
 The circuit is represented by a linear transform. The circuit is applied to an initial state(Vacuum state or Hartree Fock state) and generates the output
-Various variational circuits exist, Ry, RyRz and UCCSD. As the circuit depth increases so does the noise increase. 
+Various variational circuits exist, Ry, RyRz and UCCSD. As the circuit depth increases so does the noise increase. In this case we use heuristic variational form RYRZ rather than the UCCSD as it is shallow and uses few gates.
