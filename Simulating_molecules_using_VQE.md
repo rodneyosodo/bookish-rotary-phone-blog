@@ -35,4 +35,4 @@ The circuit is represented by a linear transform. The circuit is applied to an i
 Various variational circuits exist, Ry, RyRz and UCCSD. As the circuit depth increases so does the noise increase. In this case we use heuristic variational form RYRZ rather than the UCCSD as it is shallow and uses few gates.
 
 ## Parameter optimisation
-One problem arises, there is noise so the energy calculations may not be true. 
+One problem arises, there is noise so the energy calculations may not be true. We try and overcome this by gradient descent. 
