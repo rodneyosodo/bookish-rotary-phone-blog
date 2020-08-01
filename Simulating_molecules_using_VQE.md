@@ -42,3 +42,4 @@ Under no oise Sequential Least Squares Programming(SLSQP) and Constarint Optimis
 ## PROCESS
 1. We map the molecular hamiltonians into qubit hamiltonians. We copy the electon orbitals interactions to qubits.
 2. We create an ansatz.
+If we want to vary the ansatz then we need a parametrized circuit with a fixed form.There are various variational forms that exist, Ry, RyRz and UCCSD which utilize domain specific knowledge
