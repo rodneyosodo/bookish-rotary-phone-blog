@@ -41,3 +41,4 @@ Under no oise Sequential Least Squares Programming(SLSQP) and Constarint Optimis
 
 ## PROCESS
 1. We map the molecular hamiltonians into qubit hamiltonians. We copy the electon orbitals interactions to qubits.
+2. We create an ansatz.
