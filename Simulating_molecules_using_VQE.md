@@ -38,3 +38,5 @@ Various variational circuits exist, Ry, RyRz and UCCSD. As the circuit depth inc
 One problem arises, there is noise so the energy calculations may not be true. We try and overcome this by gradient descent. But again gradient descent has it problems.
 We use Simulatneous Perteburation Stochastic Approximation(SPSA) as the ideal optimuizer. It works by perteburing all the parameters in random. 
 Under no oise Sequential Least Squares Programming(SLSQP) and Constarint Optimisation by Linear Approximation(COBYLA) are prefered.
+
+## PROCESS
