@@ -40,3 +40,4 @@ We use Simulatneous Perteburation Stochastic Approximation(SPSA) as the ideal op
 Under no oise Sequential Least Squares Programming(SLSQP) and Constarint Optimisation by Linear Approximation(COBYLA) are prefered.
 
 ## PROCESS
+1. We map the molecular hamiltonians into qubit hamiltonians. We copy the electon orbitals interactions to qubits.
