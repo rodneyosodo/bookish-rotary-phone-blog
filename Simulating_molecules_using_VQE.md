@@ -46,4 +46,6 @@ If we want to vary the ansatz then we need a parametrized circuit with a fixed f
 
 3. Parameter optimization
 
-4. 
+
+
+## IMPLEMENTATION
