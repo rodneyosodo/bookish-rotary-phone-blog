@@ -53,3 +53,6 @@ If we want to vary the ansatz then we need a parametrized circuit with a fixed f
 Hopefully you have gained a firm understadng on how VQE works and you can now implement one on your own. Leave some claps and follow me for more content
 
 <img src="https://i.upmath.me/svg/%5Clambda%20min" alt="\lambda min" />
+
+A
+
