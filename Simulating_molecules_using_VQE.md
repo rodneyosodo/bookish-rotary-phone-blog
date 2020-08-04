@@ -56,3 +56,6 @@ Hopefully you have gained a firm understadng on how VQE works and you can now im
 
 A
 
+<img src="https://i.upmath.me/svg/%5Cmid%20%5Cpsi%20min%20%5Crangle%20" alt="\mid \psi min \rangle " />
+
+b
