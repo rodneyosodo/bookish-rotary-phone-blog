@@ -63,3 +63,7 @@ b
 <img src="https://i.upmath.me/svg/ax%5E2%2Bbx%2Bc%3D0" alt="ax^2+bx+c=0" />
 
 c
+
+<img src="https://i.upmath.me/svg/%20%5Cpsi_i%20%5Crangle%20%3D%20%5Clambda_i%20%7C%5Cpsi_i%5Crangle" alt=" \psi_i \rangle = \lambda_i |\psi_i\rangle" />
+
+d
