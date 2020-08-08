@@ -73,3 +73,6 @@ d
 
 e
 
+<img src="https://i.upmath.me/svg/%20%5Clambda_i%20%3D%20%5Clambda_i%5E*" alt=" \lambda_i = \lambda_i^*" />
+
+f
