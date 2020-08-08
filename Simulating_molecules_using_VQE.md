@@ -67,3 +67,6 @@ c
 <img src="https://i.upmath.me/svg/%20%5Cpsi_i%20%5Crangle%20%3D%20%5Clambda_i%20%7C%5Cpsi_i%5Crangle" alt=" \psi_i \rangle = \lambda_i |\psi_i\rangle" />
 
 d
+
+<img src="https://i.upmath.me/svg/%20H%20%3D%20H%5E%7B%5Cdagger%7D%20" alt=" H = H^{\dagger} " />
+
