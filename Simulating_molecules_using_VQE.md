@@ -83,3 +83,6 @@ g
 <img src="https://i.upmath.me/svg/%20%5Clambda_i%20" alt=" \lambda_i " />
 
 h
+
+<img src="https://i.upmath.me/svg/%7C%5Cpsi_i%5Crangle" alt="|\psi_i\rangle" />
+
