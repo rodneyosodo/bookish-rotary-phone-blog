@@ -96,3 +96,6 @@ f
 
 f
 
+<img src="https://i.upmath.me/svg/%20%5Clangle%20H%20%5Crangle_%7B%5Cpsi%7D%20%26%5Cequiv%20%5Clangle%20%5Cpsi%20%7C%20H%20%7C%20%5Cpsi%20%5Crangle%20" alt=" \langle H \rangle_{\psi} &amp;\equiv \langle \psi | H | \psi \rangle " />
+
+g
