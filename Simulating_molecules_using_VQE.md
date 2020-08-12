@@ -91,3 +91,6 @@ i
 <img src="https://i.upmath.me/svg/H" alt="H" />
 
 f
+
+<img src="https://i.upmath.me/svg/%20%7C%5Cpsi%5Crangle%20" alt=" |\psi\rangle " />
+
