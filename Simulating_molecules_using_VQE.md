@@ -187,3 +187,13 @@ f
 <img src="https://i.upmath.me/svg/U(%5Ctheta)%7C%5Cpsi%5Crangle%20%5Cequiv%20%7C%5Cpsi(%5Ctheta)%5Crangle" alt="U(\theta)|\psi\rangle \equiv |\psi(\theta)\rangle" />
 
 f
+
+<img src="https://i.upmath.me/svg/%7C%5Cpsi_%7Bmin%7D%5Crangle" alt="|\psi_{min}\rangle" />
+
+f
+
+<img src="https://i.upmath.me/svg/%5Ctheta" alt="\theta" />
+
+f
+
+<img src="https://i.upmath.me/svg/%5Clangle%20%5Cpsi(%5Ctheta)%20%7CH%7C%5Cpsi(%5Ctheta)%20%5Crangle" alt="\langle \psi(\theta) |H|\psi(\theta) \rangle" />
