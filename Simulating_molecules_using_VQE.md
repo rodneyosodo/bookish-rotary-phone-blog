@@ -184,3 +184,6 @@ f
 
 f
 
+<img src="https://i.upmath.me/svg/U(%5Ctheta)%7C%5Cpsi%5Crangle%20%5Cequiv%20%7C%5Cpsi(%5Ctheta)%5Crangle" alt="U(\theta)|\psi\rangle \equiv |\psi(\theta)\rangle" />
+
+f
