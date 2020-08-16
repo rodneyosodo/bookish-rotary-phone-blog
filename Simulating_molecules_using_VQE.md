@@ -113,3 +113,6 @@ g
 
 f
 
+<img src="https://i.upmath.me/svg/%7C%20%5Clangle%20%5Cpsi_i%20%7C%20%5Cpsi%5Crangle%20%7C%5E2%20%5Cge%200" alt="| \langle \psi_i | \psi\rangle |^2 \ge 0" />
+
+g
