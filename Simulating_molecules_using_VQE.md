@@ -108,3 +108,6 @@ g
 <img src="https://i.upmath.me/svg/%20%5Csum_%7Bi%20%3D%201%7D%5E%7BN%7D%20%5Clambda_i%20%5Clangle%20%5Cpsi%20%7C%20%5Cpsi_i%5Crangle%20%5Clangle%20%5Cpsi_i%20%7C%20%5Cpsi%5Crangle%20" alt=" \sum_{i = 1}^{N} \lambda_i \langle \psi | \psi_i\rangle \langle \psi_i | \psi\rangle " />
 
 g
+
+<img src="https://i.upmath.me/svg/%5Csum_%7Bi%20%3D%201%7D%5E%7BN%7D%20%5Clambda_i%20%7C%20%5Clangle%20%5Cpsi_i%20%7C%20%5Cpsi%5Crangle%20%7C%5E2" alt="\sum_{i = 1}^{N} \lambda_i | \langle \psi_i | \psi\rangle |^2" />
+
