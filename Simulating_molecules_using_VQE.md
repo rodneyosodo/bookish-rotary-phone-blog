@@ -119,3 +119,6 @@ g
 
 <img src="https://i.upmath.me/svg/%20%5Clambda_%7Bmin%7D%20%5Cle%20%5Clangle%20H%20%5Crangle_%7B%5Cpsi%7D%20%3D%20%5Clangle%20%5Cpsi%20%7C%20H%20%7C%20%5Cpsi%20%5Crangle%20%3D%20%5Csum_%7Bi%20%3D%201%7D%5E%7BN%7D%20%5Clambda_i%20%7C%20%5Clangle%20%5Cpsi_i%20%7C%20%5Cpsi%5Crangle%20%7C%5E2" alt=" \lambda_{min} \le \langle H \rangle_{\psi} = \langle \psi | H | \psi \rangle = \sum_{i = 1}^{N} \lambda_i | \langle \psi_i | \psi\rangle |^2" />
 
+
+g
+
