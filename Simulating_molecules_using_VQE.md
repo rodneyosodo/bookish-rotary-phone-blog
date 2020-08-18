@@ -128,3 +128,5 @@ g
 
 <img src="https://i.upmath.me/svg/%5Clangle%20%5Cpsi_%7Bmin%7D%7CH%7C%5Cpsi_%7Bmin%7D%5Crangle%20%3D%20%5Clangle%20%5Cpsi_%7Bmin%7D%7C%5Clambda_%7Bmin%7D%7C%5Cpsi_%7Bmin%7D%5Crangle%20%3D%20%5Clambda_%7Bmin%7D" alt="\langle \psi_{min}|H|\psi_{min}\rangle = \langle \psi_{min}|\lambda_{min}|\psi_{min}\rangle = \lambda_{min}" />
 
+g
+
