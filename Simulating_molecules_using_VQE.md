@@ -133,3 +133,10 @@ g
 <img src="https://i.upmath.me/svg/%5Clangle%20H%20%5Crangle_%7B%5Cpsi_%7Bmin%7D%7D%3D%5Clambda_%7Bmin%7D" alt="\langle H \rangle_{\psi_{min}}=\lambda_{min}" />
 
 g
+
+<img src="https://i.upmath.me/svg/E_%7Bgs%7D" alt="E_{gs}" />
+
+f
+
+
+f
