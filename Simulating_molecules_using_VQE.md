@@ -138,5 +138,9 @@ g
 
 f
 
+<img src="https://i.upmath.me/svg/%7C%5Cpsi%20%5Crangle" alt="|\psi \rangle" />
+
+f
+
 
 f
