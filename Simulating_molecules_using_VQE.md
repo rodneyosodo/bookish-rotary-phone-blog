@@ -146,5 +146,6 @@ f
 
 f
 
+<img src="https://i.upmath.me/svg/%5Clangle%20H%20%5Crangle_%7B%5Cpsi%7D" alt="\langle H \rangle_{\psi}" />
 
 f
