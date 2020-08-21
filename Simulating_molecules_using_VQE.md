@@ -70,12 +70,12 @@ d
 
 <img src="https://i.upmath.me/svg/%20H%20%3D%20H%5E%7B%5Cdagger%7D%20" alt=" H = H^{\dagger} " />
 
-
 e
 
 <img src="https://i.upmath.me/svg/%20%5Clambda_i%20%3D%20%5Clambda_i%5E*" alt=" \lambda_i = \lambda_i^*" />
 
 f
+
 <img src="https://i.upmath.me/svg/%20H%20%3D%20%5Csum_%7Bi%20%3D%201%7D%5E%7BN%7D%20%5Clambda_i%20%7C%5Cpsi_i%5Crangle%20%5Clangle%20%5Cpsi_i%20%7C" alt=" H = \sum_{i = 1}^{N} \lambda_i |\psi_i\rangle \langle \psi_i |" />
 
 g
@@ -102,7 +102,6 @@ g
 
 <img src="https://i.upmath.me/svg/%20%5Clangle%20H%20%5Crangle_%7B%5Cpsi%7D%20%3D%20%5Clangle%20%5Cpsi%20%7C%20H%20%7C%20%5Cpsi%20%5Crangle%20%26%3D%20%5Clangle%20%5Cpsi%20%7C%20%5Cleft(%5Csum_%7Bi%20%3D%201%7D%5E%7BN%7D%20%5Clambda_i%20%7C%5Cpsi_i%5Crangle%20%5Clangle%20%5Cpsi_i%20%7C%5Cright)%20%7C%5Cpsi%5Crangle" alt=" \langle H \rangle_{\psi} = \langle \psi | H | \psi \rangle &amp;= \langle \psi | \left(\sum_{i = 1}^{N} \lambda_i |\psi_i\rangle \langle \psi_i |\right) |\psi\rangle" />
 
-
 g
 
 <img src="https://i.upmath.me/svg/%20%5Csum_%7Bi%20%3D%201%7D%5E%7BN%7D%20%5Clambda_i%20%5Clangle%20%5Cpsi%20%7C%20%5Cpsi_i%5Crangle%20%5Clangle%20%5Cpsi_i%20%7C%20%5Cpsi%5Crangle%20" alt=" \sum_{i = 1}^{N} \lambda_i \langle \psi | \psi_i\rangle \langle \psi_i | \psi\rangle " />
@@ -118,7 +117,6 @@ f
 g
 
 <img src="https://i.upmath.me/svg/%20%5Clambda_%7Bmin%7D%20%5Cle%20%5Clangle%20H%20%5Crangle_%7B%5Cpsi%7D%20%3D%20%5Clangle%20%5Cpsi%20%7C%20H%20%7C%20%5Cpsi%20%5Crangle%20%3D%20%5Csum_%7Bi%20%3D%201%7D%5E%7BN%7D%20%5Clambda_i%20%7C%20%5Clangle%20%5Cpsi_i%20%7C%20%5Cpsi%5Crangle%20%7C%5E2" alt=" \lambda_{min} \le \langle H \rangle_{\psi} = \langle \psi | H | \psi \rangle = \sum_{i = 1}^{N} \lambda_i | \langle \psi_i | \psi\rangle |^2" />
-
 
 g
 
@@ -149,3 +147,40 @@ f
 <img src="https://i.upmath.me/svg/%5Clangle%20H%20%5Crangle_%7B%5Cpsi%7D" alt="\langle H \rangle_{\psi}" />
 
 f
+
+<img src="https://i.upmath.me/svg/%5Clambda_%7Bmin%7D" alt="\lambda_{min}" />
+
+f
+
+<img src="https://i.upmath.me/svg/%7C%5Cpsi_%7Bmin%7D%5Crangle" alt="|\psi_{min}\rangle" />
+
+f
+
+<img src="https://i.upmath.me/svg/%5Clambda_%7B%5Ctheta%7D" alt="\lambda_{\theta}" />
+
+f
+
+<img src="https://i.upmath.me/svg/%5Clambda_%7Bmin%7D" alt="\lambda_{min}" />
+
+f
+
+<img src="https://i.upmath.me/svg/%5Clambda_%7Bmin%7D%20%5Cle%20%5Clambda_%7B%5Ctheta%7D%20%5Cequiv%20%5Clangle%20%5Cpsi(%5Ctheta)%20%7CH%7C%5Cpsi(%5Ctheta)%20%5Crangle" alt="\lambda_{min} \le \lambda_{\theta} \equiv \langle \psi(\theta) |H|\psi(\theta) \rangle" />
+
+f
+
+<img src="https://i.upmath.me/svg/%7C%5Cpsi(%5Ctheta)%5Crangle" alt="|\psi(\theta)\rangle" />
+
+f
+
+<img src="https://i.upmath.me/svg/%5Clambda_%7B%5Ctheta%7D" alt="\lambda_{\theta}" />
+
+f
+
+<img src="https://i.upmath.me/svg/%20U(%5Ctheta)" alt=" U(\theta)" />
+
+f
+
+<img src="https://i.upmath.me/svg/%7C%5Cpsi%5Crangle" alt="|\psi\rangle" />
+
+f
+
