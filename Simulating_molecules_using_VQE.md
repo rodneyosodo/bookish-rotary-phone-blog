@@ -188,3 +188,7 @@ f
 
 f
 
+<img src="https://i.upmath.me/svg/%7C%5Cpsi_%7Bmin%7D%5Crangle" alt="|\psi_{min}\rangle" />
+
+f
+
