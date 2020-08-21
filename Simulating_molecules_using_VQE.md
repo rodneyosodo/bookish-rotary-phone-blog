@@ -192,3 +192,7 @@ f
 
 f
 
+<img src="https://i.upmath.me/svg/%5Ctheta" alt="\theta" />
+
+f
+
