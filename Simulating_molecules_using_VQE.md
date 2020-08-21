@@ -196,3 +196,4 @@ f
 
 f
 
+<img src="https://i.upmath.me/svg/%5Clangle%20%5Cpsi(%5Ctheta)%20%7CH%7C%5Cpsi(%5Ctheta)%20%5Crangle" alt="\langle \psi(\theta) |H|\psi(\theta) \rangle" />
