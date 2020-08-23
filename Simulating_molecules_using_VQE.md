@@ -13,6 +13,8 @@ Fundamentally, light was believed to be a wave. However, Albert Einstein found t
 
 Determining these properties is difficult for a classical computer since the electrons may be highly entangled. To model this accurately, we require more computational power, and this is where quantum computers come into play. Compared to classical computers, they are more efficient at handling entanglement.
 
+LiH is a 12 body molecule containing 4 protons, 4 electrons, and 4 neutrons. This creates a 12 body model, which becomes intractable when simulating it both with a classical and quantum computer. So, this model reduces the First Quantized Molecular Hamiltonian to one two body interaction between two electrons in the hybridized p orbital and four one body interactions with their respective nuclei.
+
 ![](https://i.imgur.com/anvTZWN.png)
 > By Wikipedia
 
@@ -40,7 +42,7 @@ We then copy the electron orbitals interactions to qubits.
 #### 2. We create an ansatz.
 If we want to vary the ansatz then we need a parametrized circuit with a fixed form. There are various variational forms that exist, Ry, RyRz and UCCSD which utilize domain specific knowledge. By applying a parameterized circuit represented by a linear transform <img src="https://i.upmath.me/svg/%20U(%5Ctheta)" alt=" U(\theta)" /> to some intial state, Vacuum state <img src="https://i.upmath.me/svg/%7C%200%5Crangle" alt="|\0\rangle" /> or Hartree Fock state, <img src="https://i.upmath.me/svg/%7C%5Cpsi%5Crangle" alt="|\psi\rangle" /> the output generated is <img src="https://i.upmath.me/svg/U(%5Ctheta)%7C%5Cpsi%5Crangle%20%5Cequiv%20%7C%5Cpsi(%5Ctheta)%5Crangle" alt="U(\theta)|\psi\rangle \equiv |\psi(\theta)\rangle" />. This estimate is optimized by a classical optimizer changing the parameter <img src="https://i.upmath.me/svg/%5Ctheta" alt="\theta" /> thus minimizing the expectation value of <img src="https://i.upmath.me/svg/%5Clangle%20%5Cpsi(%5Ctheta)%20%7CH%7C%5Cpsi(%5Ctheta)%20%5Crangle" alt="\langle \psi(\theta) |H|\psi(\theta) \rangle" />. This is the variational principle.
 
-Iterative optimization over <img src="https://i.upmath.me/svg/%7C%5Cpsi(%5Ctheta)%5Crangle" alt="|\psi(\theta)\rangle" /> aims to yield an expectation value  ⟨ψ(θ)|H|ψ(θ)⟩≈Egs≡λmin . Ideally,  <img src="https://i.upmath.me/svg/%7C%5Cpsi(%5Ctheta)%5Crangle" alt="|\psi(\theta)\rangle" />  will be close to  <img src="https://i.upmath.me/svg/%7C%5Cpsi_%7Bmin%7D%5Crangle" alt="|\psi_{min}\rangle" />  although in practice, useful bounds on  <img src="https://i.upmath.me/svg/E_%7Bgs%7D" alt="E_{gs}" />  can be obtained even if this is not the case. As the circuit depth increases so does the noise increase. In this case we use heuristic variational form RYRZ rather than the UCCSD as it is shallow and uses few gates.
+Iterative optimization over <img src="https://i.upmath.me/svg/%7C%5Cpsi(%5Ctheta)%5Crangle" alt="|\psi(\theta)\rangle" /> aims to yield an expectation value  ⟨ψ(θ)|H|ψ(θ)⟩≈Egs≡λmin . Ideally,  <img src="https://i.upmath.me/svg/%5Clambda_%7B%5Ctheta%7D" alt="\lambda_{\theta}" />  will be close to  <img src="https://i.upmath.me/svg/%5Clambda%20min" alt="\lambda min" />  although in practice, useful bounds on  <img src="https://i.upmath.me/svg/E_%7Bgs%7D" alt="E_{gs}" />  can be obtained even if this is not the case. As the circuit depth increases so does the noise increase. In this case we use heuristic variational form RYRZ rather than the UCCSD as it is shallow and uses few gates.
 
 > Hermitian matrix <img src="https://i.upmath.me/svg/H" alt="H" /> is equal to its own conjugate transpose
 > 
@@ -52,13 +54,13 @@ Iterative optimization over <img src="https://i.upmath.me/svg/%7C%5Cpsi(%5Ctheta
 
 > 
 
-The expectation value corresponding to the Hermitian matrix to an arbitrary state is given by:
 
 The expectation value of any wave function will be at least the minimum eigenvalue associated with the wave function.
 The ground state of the Hamiltonian system is the smallest eigenvalue associated with the Hermitian matrix.
 
 
 Moreover, <img src="https://i.upmath.me/svg/H" alt="H" /> may be expressed as <img src="https://i.upmath.me/svg/%20H%20%3D%20%5Csum_%7Bi%20%3D%201%7D%5E%7BN%7D%20%5Clambda_i%20%7C%5Cpsi_i%5Crangle%20%5Clangle%20%5Cpsi_i%20%7C" alt=" H = \sum_{i = 1}^{N} \lambda_i |\psi_i\rangle \langle \psi_i |" /> where each <img src="https://i.upmath.me/svg/%20%5Clambda_i%20" alt=" \lambda_i " />  is the eigenvalue corresponding to the eigenvector <img src="https://i.upmath.me/svg/%7C%5Cpsi_i%5Crangle" alt="|\psi_i\rangle" />. Furthermore, the expectation value of the observable  <img src="https://i.upmath.me/svg/H" alt="H" />  on an arbitrary quantum state <img src="https://i.upmath.me/svg/%20%7C%5Cpsi%5Crangle%20" alt=" |\psi\rangle " /> is given by <img src="https://i.upmath.me/svg/%20%5Clangle%20H%20%5Crangle_%7B%5Cpsi%7D%20%26%5Cequiv%20%5Clangle%20%5Cpsi%20%7C%20H%20%7C%20%5Cpsi%20%5Crangle%20" alt=" \langle H \rangle_{\psi} &amp;\equiv \langle \psi | H | \psi \rangle " />. Substituting <img src="https://i.upmath.me/svg/H" alt="H" /> with its representation as a weighted sum of its eigenvectors,
+
 
 <img src="https://i.upmath.me/svg/%20%5Clangle%20H%20%5Crangle_%7B%5Cpsi%7D%20%3D%20%5Clangle%20%5Cpsi%20%7C%20H%20%7C%20%5Cpsi%20%5Crangle%20%26%3D%20%5Clangle%20%5Cpsi%20%7C%20%5Cleft(%5Csum_%7Bi%20%3D%201%7D%5E%7BN%7D%20%5Clambda_i%20%7C%5Cpsi_i%5Crangle%20%5Clangle%20%5Cpsi_i%20%7C%5Cright)%20%7C%5Cpsi%5Crangle" alt=" \langle H \rangle_{\psi} = \langle \psi | H | \psi \rangle &amp;= \langle \psi | \left(\sum_{i = 1}^{N} \lambda_i |\psi_i\rangle \langle \psi_i |\right) |\psi\rangle" />
 
@@ -123,10 +125,6 @@ from functools import partial
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 ```
-
-# Qiskit Summer School Final Project: VQE
-
-#### For this optional final challenge, you will be designing your implementation of a variational quantum eigensolver (VQE) algorithm that simulates the ground state energy of the Lithium Hydride (LiH) molecule. Throughout this challenge, you will be able to choose how you want to compose your simulation and the final deliverable that you want to showcase to your classmates and friends.
 
 # Defining your molecule:
 In this challenge, we will focus on LiH using the sto3g basis with the PySCF driver, which can be described in Qiskit as follows: 'inter_dist' is the interatomic distance.
@@ -207,7 +205,6 @@ There are different simulation backends that you can use to perform your simulat
 
 Among the above choices, which combination do you think would outperform others and give you the lowest estimation of LiH ground state energy with the quickest convergence? Compare the results of different combinations against each other and the classically computed exact solution at a fixed interatomic distance, for example, `inter_dist=1.6`. 
 
-
 To access the intermediate data during the optimization, you would need to utilize the `callback` option in the VQE function:
 
 `def store_intermediate_result(eval_count, parameters, mean, std):
@@ -220,16 +217,13 @@ To access the intermediate data during the optimization, you would need to utili
 
 `algo_result = algo.run(quantum_instance)`
 
-An example of comparing the performance of different optimizers while using the RY variational ansatz could like the following:
-![RY_error.png](attachment:RY_error.png)
-![RY_convergence.png](attachment:RY_convergence.png)
 
-### Compute the ground state energy of LiH at various different interatomic distances
-By changing the parameter `inter_dist`, you can use your VQE algorithm to calculate the ground state energy of LiH at various interatomic distances, and potentially produce a plot as you are seeing here. Note that the VQE results are very close to the exact results, and so the exact energy curve is hidden by the VQE curve.
-<img src="attachment:VQE_dist.png" width="600">
+
+### Compute the ground state energy of LiH at various interatomic distances
+By changing the parameter `inter_dist,` you can use your VQE algorithm to calculate the ground state energy of LiH at various interatomic distances, and potentially produce a plot as you see here. Note that the VQE results are very close to the exact results, and so the exact energy curve is hidden by the VQE curve.
 
 ### How does your VQE algorithm perform in the presence of noise?
-Trying importing the noise model and qubit coupling map of a real IBM quantum device into your simulation. You can use the imported noise model in your simulation by passing it into your quantum instance. You can also try enabling error mitigation in order to lower the effect of noise on your simulation results.
+Try importing the noise model and qubit coupling map of a real IBM quantum device into your simulation. You can use the imported noise model in your simulation by passing it into your quantum instance. You can also try enabling error mitigation to lower the effect of noise on your simulation results.
 
 
 ```python
@@ -241,10 +235,8 @@ noise_model = noise.device.basic_device_noise_model(device.properties())
 basis_gates = noise_model.basis_gates
 ```
 
-An example of comparing the energy convergence of using SPSA and COBYLA with the ibmq_essex noise model could look like the following
-![noise.png](attachment:noise.png)
 
-### Now given the choices you have made above, try writing your own VQE algorithm in Qiskit. You can find an example of using Qiskit to simuate molecules with VQE [here](https://qiskit.org/textbook/ch-applications/vqe-molecules.html).
+### You can find an example of using Qiskit to simulate molecules with VQE [here](https://qiskit.org/textbook/ch-applications/vqe-molecules.html).
 
 ```python
 # Classically solve for the lowest eigenvalue
@@ -425,59 +417,6 @@ plt.title('Energy Convergence of VQE: UCCSD Ansatz')
 ```
 ![](https://i.imgur.com/fPGYHjy.png)
 
-```python
-# Dictionary of optimizers:
-opt_dict = {'SPSA' , 'SLSQP' , 'COBYLA' , 'L_BFGS_B'}
-
-for opt in opt_dict:
-    print('Testing', str(opt) , 'optimizer')
-    qubitOp, num_spin_orbitals, num_particles, qubit_reduction, shift = compute_LiH_qubitOp('parity' , 1.5)
-    # Classically solve for the exact solution and use that as your reference value
-    ref = exact_solver(qubitOp) + shift
-
-    # Specify your initial state
-    init_state = HartreeFock(num_spin_orbitals,num_particles, qubit_mapping='parity') 
-
-    # Select a state preparation ansatz
-    # Equivalently, choose a parameterization for our trial wave function.
-    var_form = EfficientSU2(qubitOp.num_qubits , entanglement='full')
-
-    # Choose where to run/simulate our circuit
-    quantum_instance = Aer.get_backend('statevector_simulator')
-
-    # Choose the classical optimizer
-    if opt == 'SPSA':
-        optimizer = SPSA(max_trials = 1000)
-    elif opt == 'SLSQP':
-        optimizer = SLSQP(maxiter = 1000)
-    elif opt == 'L_BFGS_B':
-        optimizer = L_BFGS_B(maxfun = 1000 ,  maxiter = 1000)
-    elif opt == 'COBYLA':
-        optimizer = COBYLA(maxiter = 1000)
-    
-    counts =[]
-    values =[]
-    params =[]
-    deviation =[]
-
-    # Run your VQE instance
-    vqe = VQE(operator=qubitOp, var_form=var_form, optimizer=optimizer , callback = store_intermediate_result, quantum_instance=quantum_instance)
-    vqe_results = vqe.run(quantum_instance)
-
-    #Printing error in final value:
-    ground_state_energy = vqe_results['eigenvalue'] + shift
-    energy_error_ground = np.abs(np.real(ref) - ground_state_energy)
-    print('Error:', str(energy_error_ground))
-    
-    # Calculating energy error
-    vqe_energies = np.real(values) + shift
-    energy_error = np.abs(np.real(ref) - vqe_energies)
-    plt.plot(counts , energy_error , label=str(opt))
-plt.legend()
-plt.xlabel('Counts')
-plt.ylabel('Energy Error/ Hartree')
-plt.title('Energy Convergence of VQE: RyRz Ansatz')
-```
 
 ```python
 # Trying all combinations to get the most efficiency
@@ -572,4 +511,5 @@ import qiskit.tools.jupyter
 
 <div style='width: 100%; background-color:#d5d9e0;padding-left: 10px; padding-bottom: 10px; padding-right: 10px; padding-top: 5px'><h3>This code is a part of Qiskit</h3><p>&copy; Copyright IBM 2017, 2020.</p><p>This code is licensed under the Apache License, Version 2.0. You may<br>obtain a copy of this license in the LICENSE.txt file in the root directory<br> of this source tree or at http://www.apache.org/licenses/LICENSE-2.0.<p>Any modifications or derivative works of this code must retain this<br>copyright notice, and modified files need to carry a notice indicating<br>that they have been altered from the originals.</p></div>
 
-Hopefully you have gained a firm understadng on how VQE works and you can now implement one on your own. Leave some claps and follow me for more content
+
+Hopefully, you have gained a firm understanding of how VQE works and can now implement one on your own. Leave some claps and follow me for more content. I worked with [Victor](https://github.com/VictorCarlquist)
