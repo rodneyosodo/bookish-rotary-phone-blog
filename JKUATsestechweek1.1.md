@@ -15,10 +15,19 @@ Coming upto this week, this event made us realise some of the key things we, JKU
 
 I will relieve my organising committee duties and narrate it as an attendee. 
 
-The moring of day one was quite chilly. 
+The moring of day one was quite chilly. I definitely knew the god were on our side. Most of the things went as planned apart from some few hiccups here and there. We were graced to have Kelvin Ndemo a github student ambassador doubling in as a software developer in Twiga foods. Also, we have our alumni Ephantus Ngugi who works a gearbox. They kicked off the day on a high note and we were pleased to have them. The morning session were impressive just to mention a few talks;
+1. PCB design from Chrispine Tinega from JKUAT SES
+2. Cloud functions from Josh Cardiff from Microsoft
+In the afternoon I had my first talk under the structural track, computation fluid dynamics. here I was able to brief the attendees on how to carry out a CFD study with our case study Nakuja N1 Airframe. This is was our first model rocket we flew with the Nakuja teams.
+Other talks in the afternoon were;
+1. Software Control from Felix Wanyoike from JKUAT SES
+2. Building IoT systems with Kennedy Otieno from Africa's Talking
+3. Embedded systems from Calvin Mwadime. Here we explored the embedded system in the Voyager spacecraft.
+I finished the day with a talk on building the JKUAT SES development board. I must say it was a quite exhausting day.
 
 ## Day 2
 
+Rest is paramount to any human being but to me it was evitable as I had to participate the following daya in a line following robot. I spent a better part of the night soldering some broken connections and getting our robot, Ludwing, ready for the next day. My team was comprised of Ian Kibandi and Steve Munene both my classmates. We hadn't implemented any control to our program at first but found another control systems, names not mention, so that you don't laugh how dumb we were. Fortunately in the first track we were able to finish the race fastest but lost our on the second track which consisted of three laps. We managed to finish at the second position behind Sammy Oina and infront of Michael Kimani, Washington Kamandi and Felix Wanyoike and Spencer Mogire. I guess this challenge was able to show us some insights on how we will tackle our final year projects.
 
 ## Thank You Note
 
