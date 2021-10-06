@@ -144,6 +144,7 @@ Any admin processes should be run in the same environment as the app's regular l
 
 
 ## References
+
 1. https://dzone.com/articles/12-factor-app-principles-and-cloud-native-microser-1
 2. https://simpleprogrammer.com/twelve-factor-app/
 3. https://hackernoon.com/the-twelve-factor-app-12-best-practices-for-microservices-sf2vz31wn
@@ -152,3 +153,5 @@ Any admin processes should be run in the same environment as the app's regular l
 6. https://12factor.net/disposability
 7. https://scand.com/company/blog/the-twelve-factor-app-methodology/
 8. https://github.com/adamwiggins/12factor/blob/master/content/dev-prod-parity.md
+
+## Acknowledgements
