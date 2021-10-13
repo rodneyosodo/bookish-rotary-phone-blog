@@ -1,12 +1,12 @@
-# Blog 2 Describing the hardware
+# Blog 1 Describing the hardware
 
 ## Introduction
 
-At the heart of this project is a hardware device. But before that let's explain what is this term called IoT. The Internet of Things (IoT) is a term that refers to the network of devices that connect to the internet. The Internet of Things refers to when commonplace items or things are connected to the internet via sensors and IP addresses. Anything from your shoes to your automobile to your coffee pot may be considered an everyday object. Connecting these gadgets to the internet allows data and user analytics to be extracted. The data and analytics gathered may be utilised for a variety of purposes, including companies, surveys, alerts, and just improving user experiences.
+This project is primarily a hardware device with a hint of IoT. The Internet of Things (IoT) is a term that refers to the network of devices that connect to the internet. It also refers to connecting commonplace items or things to the internet via sensors and IP addresses. Anything from your shoes to your automobile to your coffee pot may be considered an everyday object. Connecting these gadgets to the internet allows data and user analytics to be extracted. The data and analytics gathered may be utilised for a variety of purposes, including surveys, alerts, and just improving user experiences.
 
-This means we have two systems, a frontend system, which will be our hardware device and a backend system which will be our server. Our IoT device will constitute the JKUAT SES development board based on the esp32 WROOM chips. So if you have any esp32 chip this will work out fine. We used the DHT11 module as our temperature and humidity sensor. With this, we can send temperature and humidity data to our backend services for monitoring purposes.
+We, therefore, have two systems, a frontend system, which will be our hardware device and a backend system which will be our server. Our IoT device will constitute the JKUAT SES development board which is based on the ESP32 WROOM chips. Any ESP32 chip can therefore be used as an alternative. We shall use the DHT11 module as our temperature and humidity sensor. With this, we can send temperature and humidity data to our backend services for monitoring purposes.
 
-For connectivity, we are using the WIFI module which is inbuilt on the esp32 WROOM chip. Even for production purposes, if we are to deploy it to homes, I guess most people have WIFI in their homes.
+For connectivity, the ESP32 chip has an inbuild WIFI module that allows us to go into production by deploying the device to homes given that most homes have WIFI installed.
 
 ## Circuit
 
@@ -14,30 +14,30 @@ https://circuits4you.com/wp-content/uploads/2018/12/ESP32-Pinout.jpg
 
 https://raw.githubusercontent.com/AchimPieters/esp32-homekit-camera/master/Images/ESP32-38%20PIN-DEVBOARD.png
 
-The DHT11 has the following wires:
+The DHT11 has the following connecting wires:
 - GND is a common ground for both the dht11 and microcontroller.
 - 5 V is a positive voltage that powers the dht11.
 - Control transmit data
 
-Wiring the DHT11 to the ses dev board is easy. Connect the Red wire or VCC pin to the 5V on the ses dev board and Black wire or GND pin to the ground. Finally, connect the Orange wire or Data pin to pin 15. You can use any GPIO pins as the Data Pin
+Wiring the DHT11 to the SES development board is easy: Connect the Red wire or VCC pin to the 5V on the SES development board and Black wire or GND pin to the ground. Finally, connect the Orange wire or Data pin to pin 15. You can use any GPIO pins as the Data Pin
 
 ## DHT11
 
-The electrical resistance between two electrodes is measured by the DHT11 to detect water vapour. A moisture-holding substrate with electrodes placed to the surface serves as the humidity sensor component. When water vapour is absorbed by the substrate, ions are released, increasing the conductivity between the electrodes. The relative humidity affects the change in resistance between the electrodes. The resistance between the electrodes reduces as the relative humidity rises, whereas the resistance rises as the relative humidity falls.
+To detect water vapour, the electrical resistance between two electrodes is measured by the DHT11. A moisture-holding substrate with electrodes placed to the surface serves as the humidity sensor component. When water vapour is absorbed by the substrate, ions are released, increasing the conductivity between the electrodes. The relative humidity affects the change in resistance between the electrodes. The resistance between the electrodes reduces as the relative humidity rises, whereas the resistance rises as the relative humidity falls.
 
 The DHT11 has a built-in thermistor that monitors temperature. The calibration coefficients are stored and controlled by an IC on the device.
 
 ## MQTT
 
-You're not incorrect if you think the Internet of Things (IoT) has gone from zero to pervasive hype in a short period. Message Queuing Telemetry Transport, or MQTT, is, I believe, one of the most critical elements affecting the condition of the IoT today.
+The Internet of Things (IoT) has gone from zero to pervasive hype in a very short period. Message Queuing Telemetry Transport, or MQTT, is, I believe, one of the most critical elements affecting the condition of IoT today.
 
-Message Queuing Telemetry Transport (MQTT) is an acronym for Message Queuing Telemetry Transport. It's a lightweight messaging protocol designed for usage in situations where clients require a minimal code footprint and are linked to unreliable networks or networks with restricted capacity. It's mostly utilised for M2M (machine-to-machine) communication and Internet of Things connectivity.
+Message Queuing Telemetry Transport (MQTT) is a lightweight messaging protocol designed for usage in situations where clients require a minimal code footprint and are linked to unreliable networks or networks with restricted capacity. It's mostly utilised for M2M (machine-to-machine) communication and Internet of Things connectivity.
 
 MQTT was developed in 1999 by Dr Andy Stanford-Clark and Arlen Nipper. The communication method's original aim was to allow monitoring equipment in the oil and gas sector to communicate data to remote servers.
 
 MQTT uses a PUSH/SUBSCRIBE architecture to run on top of TCP/IP. There are two sorts of systems in MQTT architecture: clients and brokers. The server with which the clients communicate is known as a broker. Client messages are received by the broker, who then forwards them to other clients. Clients connect to the broker rather than communicating directly with one another.
 
-Another method MQTT reduces transmissions is by using a well-defined, compact message structure. In comparison to HTTP, each message has a fixed header of only 2 bytes.
+MQTT also reduces transmissions by using a well-defined, compact message structure. In comparison to HTTP, each message has a fixed header of only 2 bytes.
 
 
 
@@ -405,10 +405,17 @@ void reconnect() {
 }
 ```
 
+The whole code can be found [here](https://github.com/JKUATSES/2021-project-hack/tree/main/Software)
+
 ## References
+
 1. https://blackd0t.gitbook.io/africastalking-eris-devkit-playground/arduino/dht11
 2. https://lastminuteengineers.com/esp32-ota-web-updater-arduino-ide/
 3. https://microcontrollerslab.com/esp32-ota-over-the-air-updates-asyncelegantota-library-arduino/
 4. https://www.survivingwithandroid.com/esp32-mqtt-client-publish-and-subscribe/
 5. https://www.allacronyms.com/MQTT/Message_Queuing_Telemetry_Transport
 6. https://horasvilla.com/iot-and-iiot-what-is-the-difference-between-them/
+
+## Acknowledgements
+
+1. [Kelvin Gitu](https://twitter.com/GituKelvin/)
