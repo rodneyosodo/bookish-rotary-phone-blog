@@ -230,3 +230,7 @@ Run admin/management tasks as one-off processes
 Any 12-factor app administration or management activities should be executed as one-off processes within the deployment's execution environment. This process runs against a release and utilises the same codebase and configurations as any other process in that release, as well as the same dependency isolation methods as the long-running processes.
 This is a characteristic of the execution environment in which your programme runs. This may be simple if you're using a Docker-like containerized solution.
 We will be using portainer to manage our Admin processes
+
+## References
+1. https://www.guru99.com/elk-stack-tutorial.html
+2. 
