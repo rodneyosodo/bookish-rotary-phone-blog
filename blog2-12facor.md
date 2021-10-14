@@ -1,4 +1,4 @@
-# Blog 1 Describing the hardware
+# Blog 2 Describing the hardware
 
 ## Introduction
 
