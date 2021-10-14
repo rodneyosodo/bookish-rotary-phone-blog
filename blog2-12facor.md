@@ -2,32 +2,32 @@
 
 ## Introduction
 
-This project is primarily a hardware device with a hint of IoT. The Internet of Things (IoT) is a term that refers to the network of devices that connect to the internet. It also refers to connecting commonplace items or things to the internet via sensors and IP addresses. Anything from your shoes to your automobile to your coffee pot may be considered an everyday object. Connecting these gadgets to the internet allows data and user analytics to be extracted. The data and analytics gathered may be utilised for a variety of purposes, including surveys, alerts, and just improving user experiences.
+The Internet of Things (IoT) is a term that refers to the network of devices that connect to each other via the internet. It involves connecting commonplace items or things to the internet via sensors and IP addresses. Anything from your shoes to your automobile to your coffee pot may be considered an everyday object. Connecting these gadgets to the internet allows data and user analytics to be extracted. The data and analytics gathered may be utilised for a variety of purposes, including surveys,automation, alerts, and just improving user experiences.
 
-We, therefore, have two systems, a frontend system, which will be our hardware device and a backend system which will be our server. Our IoT device will constitute the JKUAT SES development board which is based on the ESP32 WROOM chips. Any ESP32 chip can therefore be used as an alternative. We shall use the DHT11 module as our temperature and humidity sensor. With this, we can send temperature and humidity data to our backend services for monitoring purposes.
+This project is primarily a hardware device with a hint of IoT. We have two systems: a frontend system, which will be our hardware device, and a backend system which will be our server. Our IoT setup will constitute an in-house JKUAT SES development board which is based on the ESP32 WROOM chips(i.e Any ESP32 chip can therefore be used as an alternative), and a DHT11 module as our temperature and humidity sensor. With this, we can send temperature and humidity data to our backend services for monitoring purposes.
 
-For connectivity, the ESP32 chip has an inbuild WIFI module that allows us to go into production by deploying the device to homes given that most homes have WIFI installed.
+For connectivity, the ESP32 chip has an in-built WIFI module that allows us to go into production by deploying the device to homes given that most homes have WIFI installed.
 
-## Circuit
+## Project Stack and Components
 
-https://circuits4you.com/wp-content/uploads/2018/12/ESP32-Pinout.jpg
+### JKUAT SES development board 
 
-https://raw.githubusercontent.com/AchimPieters/esp32-homekit-camera/master/Images/ESP32-38%20PIN-DEVBOARD.png
+The schematic and the board layout of JKUAT SES development can be found [here](https://github.com/JKUATSES/sesBoardv1) . In case you are using any other 
+ESP32-based board, the following two schematics can be helpful.
 
-The DHT11 has the following connecting wires:
-- GND is a common ground for both the dht11 and microcontroller.
-- 5 V is a positive voltage that powers the dht11.
-- Control transmit data
+#### ESP32 pinout
 
-Wiring the DHT11 to the SES development board is easy: Connect the Red wire or VCC pin to the 5V on the SES development board and Black wire or GND pin to the ground. Finally, connect the Orange wire or Data pin to pin 15. You can use any GPIO pins as the Data Pin
+![ESP 32 pinout](https://circuits4you.com/wp-content/uploads/2018/12/ESP32-Pinout.jpg)
 
-## DHT11
+![ESP32 pinout](https://raw.githubusercontent.com/AchimPieters/esp32-homekit-camera/master/Images/ESP32-38%20PIN-DEVBOARD.png)
+
+### DHT11
 
 To detect water vapour, the electrical resistance between two electrodes is measured by the DHT11. A moisture-holding substrate with electrodes placed to the surface serves as the humidity sensor component. When water vapour is absorbed by the substrate, ions are released, increasing the conductivity between the electrodes. The relative humidity affects the change in resistance between the electrodes. The resistance between the electrodes reduces as the relative humidity rises, whereas the resistance rises as the relative humidity falls.
 
 The DHT11 has a built-in thermistor that monitors temperature. The calibration coefficients are stored and controlled by an IC on the device.
 
-## MQTT
+### MQTT
 
 The Internet of Things (IoT) has gone from zero to pervasive hype in a very short period. Message Queuing Telemetry Transport, or MQTT, is, I believe, one of the most critical elements affecting the condition of IoT today.
 
@@ -39,9 +39,7 @@ MQTT uses a PUSH/SUBSCRIBE architecture to run on top of TCP/IP. There are two s
 
 MQTT also reduces transmissions by using a well-defined, compact message structure. In comparison to HTTP, each message has a fixed header of only 2 bytes.
 
-
-
-## OTA
+### OTA
 
 Instead of needing the user to connect the ESP32 to a computer via USB to execute the update, OTA programming allows the user to update/upload new software to the ESP32 via Wi-Fi.
 
@@ -51,22 +49,62 @@ One of the most useful features of OTA is that it allows a single central locati
 
 The only drawback is that you must include an additional OTA code with each drawing you publish to use OTA in the next update.
 
-Ways To Implement OTA In ESP32
+#### Ways To Implement OTA In ESP32
 There are two ways to implement OTA functionality in ESP32.
 
-Basic OTA – Over-the-air updates are sent through Arduino IDE.
-Web Updater OTA – Over-the-air updates are sent through a web browser.
+1. Basic OTA – Over-the-air updates are sent through Arduino IDE.
+2. Web Updater OTA – Over-the-air updates are sent through a web browser.
 
 On an OTA architecture, there are two key components:
-The remote device is in charge of checking for updates, downloading the new version, and installing it on its system.
-The cloud server is in charge of creating, delivering, and managing updates to linked devices.
+1. The remote device is in charge of checking for updates, downloading the new version, and installing it on its system.
+2. The cloud server is in charge of creating, delivering, and managing updates to linked devices.
+
+## Circuit
+
+![ESP32-DHT11 Circuit](https://circuits4you.com/wp-content/uploads/2019/01/ESP32-DHT11-and-DHT22-Interfacing.png)
+
+The DHT11 has the following connecting wires:
+- GND is a common ground for both the dht11 and microcontroller.
+- 5 V is a positive voltage that powers the dht11.
+- Control transmit data
+
+Wiring the DHT11 to the SES development board is easy: 
+
+1. Connect the VCC pin(Red wire) to the 5V on the SES development board.
+2. Connect the GND pin(Black wire) to the ground. 
+3. Connect the Data pin(Orange wire) to pin 15(i.e You can use any GPIO pins as the Data Pin)
+
+
 
 ## Code
 
-### Importations
 
-Here we import the necessary libraries we will need for our project
 
+### Credentials
+
+Set the Wifi, and MQTT credentials to publish messages to the MQTT server.
+
+```
+config.h
+```
+```cpp 
+#define WIFI_SSID your_wifi_ssid
+#define WIFI_PASSWORD your_wifi_password
+#define MQTT_SERVER your_mqtt_server_url
+#define MQTT_USER your_mqtt_username
+#define MQTT_PASS your_mqtt_password
+```
+
+### Hardware integration code
+#### Libraries
+
+Here we import the necessary libraries we will need for our project. Some these libraries cannot be found in the default setup.
+If that is the case, you can install them in your setup by going to Sketch > Include Library > Manage Libraries and search for the library name as follows:
+
+![ESP32 setup](https://github.com/smithjilks/2021-project-hack/blob/stud-auth/Software/stud-auth/board/imgs/ArduinoJson.webp)
+```
+project.cpp
+```
 ```cpp
 #include <Arduino.h>
 #include <DNSServer.h>
@@ -84,22 +122,12 @@ Here we import the necessary libraries we will need for our project
 #include <ArduinoJson.h> //To create the payload so that we can publish it to the subscribed topics
 ```
 
-### Credentials
+#### Declaration, definition and initialization
 
-Let's get the credentials for starting the connecting. We need the Wifi credentials also with the MQTT credentials to publish messages to our MQTT server
-
-```cpp
-#define WIFI_SSID WIFI_SSID
-#define WIFI_PASSWORD WIFI_PASSWORD
-#define MQTT_SERVER MQTT_SERVER
-#define MQTT_USER MQTT_USER
-#define MQTT_PASS MQTT_PASS
+Declare, and define variables and initialize classes.
 ```
-
-### Declaration
-
-Here we declare variables and initialize classes.
-
+project.cpp
+```
 ```cpp
 
 #define CURRENT_VERSION "1.0.0" // The current version of the firmware running
@@ -113,9 +141,17 @@ Here we declare variables and initialize classes.
 
 
 WiFiClient espClient; //Initializing the WiFiClient
+
+void setup_wifi();
+void reconnect();
+
 PubSubClient client(espClient); // Initializing the PubSubClient
 
 WebServer server(80); // Initializing the WebServer
+// functions to take care of OTA firmware update
+void handleRoot();
+String getDownloadUrl(); 
+bool downloadUpdate(String);
 
 DHT_Unified dht(DHTPIN, DHTTYPE);
 
@@ -126,7 +162,11 @@ unsigned long currentMillis; // current timings in milliseconds
 bool success; // download success
 ```
 
-### Setup
+#### setup function
+
+```
+project.cpp
+```
 
 ```cpp
 void setup(){
@@ -186,8 +226,10 @@ void setup(){
 }
 ```
 
-### Loop
-
+#### Loop  Function
+```
+project.cpp
+```
 ```cpp
 void loop() {
     // Get temperature event and print its value.
@@ -250,14 +292,18 @@ void loop() {
 ```
 
 ### Handle server requests
-
+```
+project.cpp
+```
 ```cpp
 void handleRoot() {
     server.send(200, "text/plain", "v" + String(CURRENT_VERSION));
 }
 ```
 ### Get download link
-
+```
+project.cpp
+```
 ```cpp
 String getDownloadUrl() {
     HTTPClient http;
@@ -296,6 +342,9 @@ String getDownloadUrl() {
 
 ### Download binary firmware
 
+```
+project.cpp
+```
 ```cpp
 /*
    Download binary image and use Update library to update the device.
@@ -369,7 +418,9 @@ bool downloadUpdate(String url) {
 
 ```
 ### Setup WIFI function
-
+```
+project.cpp
+```
 ```cpp
 void setup_wifi() {
     // Connecting to a WiFi network
@@ -386,6 +437,9 @@ void setup_wifi() {
 
 ### Reconnect function
 
+```
+project.cpp
+```
 ```cpp
 void reconnect() {
     // Loop until we're reconnected
@@ -405,6 +459,24 @@ void reconnect() {
 }
 ```
 
+### Subscription
+
+How you handle reception of data all depends on your level of expertise. One could setup a decoy mqtt server in their local station device 
+and tap into the data from the open port for their own application or just simply:
+
+#### Configure HiveMQ browser client to visualize the data in the browser
+
+Procedure:
+1.    Go to this [link](http://www.hivemq.com/demos/websocket-client/) and click on connect button.
+2.   Add the subscription topics one for each topic the ESP32 uses.
+
+As soon as ESP32 client start publishing data to the one topic in our code you should be able to see the changes in the page under the messages.
+
+**Important**
+
+The code provided above uses the Serial library for debugging purposes. The whole setup will only operate with Serial port open.
+For deployment, comment out all the Serial instances in the code above. 
+
 The whole code can be found [here](https://github.com/JKUATSES/2021-project-hack/tree/main/Software)
 
 ## References
@@ -419,3 +491,4 @@ The whole code can be found [here](https://github.com/JKUATSES/2021-project-hack
 ## Acknowledgements
 
 1. [Kelvin Gitu](https://twitter.com/GituKelvin/)
+2. [Washington Kamadi](https://github.com/WashingtonKK/)
