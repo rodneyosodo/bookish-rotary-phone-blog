@@ -37,6 +37,10 @@ MQTT was developed in 1999 by Dr Andy Stanford-Clark and Arlen Nipper. The commu
 
 MQTT uses a PUSH/SUBSCRIBE architecture to run on top of TCP/IP. There are two sorts of systems in MQTT architecture: clients and brokers. The server with which the clients communicate is known as a broker. Client messages are received by the broker, who then forwards them to other clients. Clients connect to the broker rather than communicating directly with one another.
 
+When a client (known as a "publisher") wants to spread information, it will publish to a specific topic, and the broker will then send that information to any customers (known as "subscribers") that have subscribed to that subject.
+
+Any client can be both a publisher and a subscriber. The clients are usually unaware of each other and are only aware of the broker who acts as an intermediary. The "pub/sub model" is a popular term for this structure.
+
 MQTT also reduces transmissions by using a well-defined, compact message structure. In comparison to HTTP, each message has a fixed header of only 2 bytes.
 
 ### OTA
@@ -59,6 +63,8 @@ On an OTA architecture, there are two key components:
 1. The remote device is in charge of checking for updates, downloading the new version, and installing it on its system.
 2. The cloud server is in charge of creating, delivering, and managing updates to linked devices.
 
+Security is key in IoT and we would need a way to verify that the binary file being downloaded is the correct file and not a malware. This can be done by both systems, IoT device and the Server. In this case, we use the server and ensure the communication is encrypted in between. This will reduce the IoT device work while sending the work to the server.
+
 ## Circuit
 
 ![ESP32-DHT11 Circuit](https://circuits4you.com/wp-content/uploads/2019/01/ESP32-DHT11-and-DHT22-Interfacing.png)
@@ -72,7 +78,7 @@ Wiring the DHT11 to the SES development board is easy:
 
 1. Connect the VCC pin(Red wire) to the 5V on the SES development board.
 2. Connect the GND pin(Black wire) to the ground. 
-3. Connect the Data pin(Orange wire) to pin 15(i.e You can use any GPIO pins as the Data Pin)
+3. Connect the Data pin(Purple wire) to pin 15(i.e You can use any GPIO pins as the Data Pin)
 
 
 
