@@ -14,7 +14,7 @@ For the frontend application, IoT application, we are binding port 80 so that th
 ```cpp
 WebServer server(80);
 ```
-### 1. RabbitMQ
+### i. RabbitMQ
 
 RabbitMQ nodes bind to ports (open server TCP sockets) to accept client and CLI tool connections. Some of the available ports you can bind are:
 - 5672, 5671: used by AMQP 0-9-1 and AMQP 1.0 clients without and with TLS
@@ -34,7 +34,7 @@ ports:
     - "1883:1883"
 ```
 
-### 2. InfluxDB
+### ii. InfluxDB
 
 Some open ports you can bind when using the InfluxDB service are:
 - 8086: The default port that runs the InfluxDB HTTP service.
@@ -58,7 +58,7 @@ ports:
     - "8089:8089/udp"
 ```
 
-### 3. Kapacitor
+### iii. Kapacitor
 
 Kapacitor exposes port 9092 which is the API port for the service.
 
@@ -71,7 +71,7 @@ ports:
     - "9092:9092"
 ```
 
-### 4. Chronograf
+### iv. Chronograf
 
 Chronograf has a WebUI port which is `8888`. If you want to visualise your data you bind that port and open it when the application is running
 
@@ -84,7 +84,7 @@ ports:
     - "8888:8888"
 ```
 
-### 5. Grafana
+### v. Grafana
 
 Grafana has a WebUI port which is `3000`. If you want to visualise your data you bind that port and open it when the application is running
 
@@ -96,7 +96,7 @@ ports:
     - '3000:3000'
 ```
 
-### 6. Portainer
+### vi. Portainer
 
 Portainer has a WebUI port which is `8000` and `9443`. One of them is HTTPS while the other is HTTP. If you want to visualise your data you bind that port and open it when the application is running
 
@@ -109,7 +109,7 @@ ports:
     - '9443:9443'
 ```
 
-### 7. Kibana
+### vii. Kibana
 
 Kibana has a WebUI port which is `5601`. If you want to visualise your data you bind that port and open it when the application is running
 
@@ -121,7 +121,7 @@ ports:
     - "5601:5601"
 ```
 
-### 8. Logstash
+### viii. Logstash
 
 ```yaml
 logstash:
@@ -132,7 +132,7 @@ ports:
 
 ```
 
-### 9. Elasticsearch
+### ix. Elasticsearch
 
 ```yaml
 elasticsearch:
@@ -143,7 +143,7 @@ ports:
     - "9300:9300"
 ```
 
-### 10. nginx
+### x. nginx
 
 Nginx exposes port 80 you have to bind it to another port so that you can serve those requests through it.
 
@@ -208,12 +208,10 @@ clear_db:
 ```
 ## 10. Dev/Prod parity
 
-Yup
 The goal of a 12-factor app is to reduce the gap between development and production as short as possible. The amount of time code spends in development but not in production is reduced with continuous deployment. Developers can deploy their code in production, just as they do in their local development environments, using a self-serve platform. Using the same underpinning services (databases, caches, queues, etc) in development as production lowers the number of minor issues that emerge in discrepancies across technologies or integrations.
 
 ## 11. Logs
 
-Yup
 Consider logs to be a continuous stream of time-ordered events gathered from all active processes and services. A 12-factor app is unconcerned with how its output is processed. It just publishes its output to the stdout stream instead. This output is collected, collated, and routed to its eventual destination by the execution environment (s).
 Most logging frameworks enable logging to stderr/stdout by default or provide a simple way to switch from file-based logging to one of these streams. The execution environment of a 12-factor programme is required to capture these streams and manage them as the platform mandates.
 
@@ -231,6 +229,5 @@ Any 12-factor app administration or management activities should be executed as 
 This is a characteristic of the execution environment in which your programme runs. This may be simple if you're using a Docker-like containerized solution.
 We will be using portainer to manage our Admin processes
 
-## References
-1. https://www.guru99.com/elk-stack-tutorial.html
-2. 
+## Acknowledgment
+1. [Kelvin Gitu](https://twitter.com/GituKelvin/)
