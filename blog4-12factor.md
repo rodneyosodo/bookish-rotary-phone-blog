@@ -34,7 +34,7 @@ ports:
     - "1883:1883"
 ```
 
-### ii. InfluxDB
+### i. InfluxDB
 
 Some open ports you can bind when using the InfluxDB service are:
 - 8086: The default port that runs the InfluxDB HTTP service.
@@ -208,10 +208,12 @@ clear_db:
 ```
 ## 10. Dev/Prod parity
 
+Yup
 The goal of a 12-factor app is to reduce the gap between development and production as short as possible. The amount of time code spends in development but not in production is reduced with continuous deployment. Developers can deploy their code in production, just as they do in their local development environments, using a self-serve platform. Using the same underpinning services (databases, caches, queues, etc) in development as production lowers the number of minor issues that emerge in discrepancies across technologies or integrations.
 
 ## 11. Logs
 
+Yup
 Consider logs to be a continuous stream of time-ordered events gathered from all active processes and services. A 12-factor app is unconcerned with how its output is processed. It just publishes its output to the stdout stream instead. This output is collected, collated, and routed to its eventual destination by the execution environment (s).
 Most logging frameworks enable logging to stderr/stdout by default or provide a simple way to switch from file-based logging to one of these streams. The execution environment of a 12-factor programme is required to capture these streams and manage them as the platform mandates.
 
