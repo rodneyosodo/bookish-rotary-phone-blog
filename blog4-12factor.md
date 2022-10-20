@@ -1,5 +1,7 @@
 # Blog 4 Second half of the 12-factor app
 
+###### tags: `blogs`
+
 ## Introduction
 
 ## 7. Port binding
@@ -34,7 +36,7 @@ ports:
     - "1883:1883"
 ```
 
-### i. InfluxDB
+### ii. InfluxDB
 
 Some open ports you can bind when using the InfluxDB service are:
 - 8086: The default port that runs the InfluxDB HTTP service.
