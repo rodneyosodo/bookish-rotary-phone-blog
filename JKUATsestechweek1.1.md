@@ -1,4 +1,7 @@
 # JKUATSESTechWeek 1.1
+
+###### tags: `blogs`
+
 Words can't express how exhilarating the event was. Every moment is still fresh in my mind and I can still relieve it. Okay, enough with flattering. Let us organise our thought compass and unfold each moment chronologically.
 
 ## Before
