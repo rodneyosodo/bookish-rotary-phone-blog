@@ -1,5 +1,7 @@
 # Blog 5 Recommendations
 
+###### tags: `blogs`
+
 The Internet of Thing (IoT) has brought with it a slew of advantages. However,it has increased and altered risks in business and IT. Reports of hijacked cameras, hacked medical equipment and infiltrated industrial control systems have appeared in recent years. This situation is expected to worsen when 5G takes hold and gadgets with embedded IoT capabilities arrive. What makes IoT so challenging is that it puts an extra layer of security on top of current safeguards. IoT is included in almost all aspects of a business, partners and supply chains — it encompasses firmware, operating systems, TCP/IP stacks, network design, data security technologies, and much more.
 
 ## [Davos](https://docs.linuxserver.io/images/docker-davos)
