@@ -1,34 +1,24 @@
 # Blog 3 First half of the 12-factor app
 
+###### tags: `blogs`
+
 ## Introduction
 
-Because many businesses wish to avoid relying solely on third-party technologies, it may be more helpful to examine the ideas that underpin an application design. This will also assist you in evaluating and comparing various solutions for resolving the underlying difficulties. Heroku, as a platform on which hundreds of millions of apps are deployed, has had to isolate the basic design principles for cloud-based applications and provide an environment that makes them simple to create and manage. The 12-Factor App is a manifesto that describes these ideas.
+Many businesses wish to avoid relying solely on third-party technologies, and it may be helpful to examine the ideas that underpin an application design. It will also assist you in evaluating and comparing various solutions for resolving the underlying difficulties. Heroku, as a platform on which hundreds of millions of apps are deployed, has had to isolate the basic design principles for cloud-based applications and provide an environment that makes them simple to create and manage. The 12-Factor App is a manifesto that describes these ideas.
 
-The first part of this post walks through the first six factors and reworks a simple Arduino IoT application with them in mind. Part 2 continues with the remaining six factors, demonstrating how this design allows easier integration with containerization technologies like Docker. I won't cover advanced container orchestration but we would recommend you give it a shot
+The first part of this post walks through the first six factors and reworks a simple Arduino IoT application with them in mind. Part 2 continues with the remaining six factors, demonstrating how this design allows easier integration with containerization technologies like Docker. I won't cover advanced container orchestration, but I would recommend you give it a shot
 
 ## 1. Codebase
 
-Yup, GitHub
+Yup, 💯 GitHub.  
 
-We start with where our [codebase](https://github.com/JKUATSES/2021-project-hack/tree/main/Software) is located. If you are a Software Developer you have interacted with Github. I personally love Github but I also have a preference for Gitlab. Initially, I was using Gitlab for CI-CD because they had a robust pipeline but came Github actions. I can't lie to you, it was a great feature. They have added a ton of features till now I wonder how people use other platforms.
-
-Github makes it easy to contribute to open source. Many if not all the software developers have an account at GitHub. This makes the user base increase thus you can interact with many people's projects. No lie, nearly every open-source tool you'll find while scouting the internet is hosted on Github. If your project is open-source, GitHub is free to use, and it contains a wiki and issue tracker that makes things simple and provide more extensive documentation and get feedback. To contribute, just fork a project, make your changes, and submit a pull request via the GitHub web app or their new cli.
-
-With excellent wiki files, you can be able to build the documentation of your project inside the wiki files. Their blog has guides on nearly every issue related to git. If you can't find it make StackOverflow your companion in your journey of attaining greatness. You can also write a well-formatted markdown.
-
-We were able to use Github actions and track changes in your code across versions. Much like using Microsoft Word or Google Drive, you can have a version history of your code so that previous versions are not lost with every iteration.
-
-If you are working on an exciting project and you need help with software development, let us know! We would be happy to know more about it!
-
-A codebase could be a source code store or a set of storehouses that share a common root. The single codebase for an application is utilized to create any number of permanent discharges that are ordained for distinctive environments. Taking after this specific teach strengths groups to analyze the seams of their application and possibly distinguish monoliths that ought to be part off into microservices. 
-
-According to Conway's law, a team's organisation will eventually be reflected in the architecture of the product the team creates. In other words, team dysfunction, poor organisation, and a lack of discipline generally lead to code dysfunction or a lack of discipline.
+Our [codebase](https://github.com/JKUATSES/2021-project-hack/tree/main/Software) is located on GitHub. If you are a software developer, chances are that you have interacted with GitHub. I personally love Github but also have an appreciation for Gitlab. Initially, I was using Gitlab for CI-CD because they had a robust pipeline but 🤔 with the introduction of Github actions, I had to switch up.  Github makes it easy to contribute to open source. Many, if not all the software developers have an account at GitHub. This makes the user base increase, thus you can interact with many people’s projects. Nearly every open-source tool you’ll find while scouting the internet 🌐 is hosted on Github. If your project is open-source, GitHub is free to use. It also contains a wiki and issue tracker that makes things simple and provides more extensive documentation and feedback. To contribute, just fork a project, make your changes, and submit a pull request via the GitHub web app or their ⭕ new cli. With excellent wiki files, 📁📁 you can build the documentation of your project inside the wiki files. Their blog has guides on nearly every issue related to git. If you can’t 🙅 find it, make StackOverflow your companion in your journey of attaining greatness. ⁉️✊🏆 You can also write a well-formatted markdown. Github actions allow you to track changes in your code across versions. Much like using Microsoft Word or Google Drive, you can have a version history of your code so that previous versions are not lost with every 🆗 iteration.  If you are working on an exciting project and you need help with software development, let us know! We would be happy to know more about it! A codebase could be a source code store or a set of storehouses that share a common root. The single codebase for an application is utilized to create any number of permanent discharges that are ordained for distinctive environments. According to Conway’s law, 😱 a team’s organisation will eventually be reflected in the architecture of the product the team creates. In other words, 📓 team dysfunction, poor 😥 organisation, and a lack of discipline generally lead to code dysfunction or a lack of discipline.
 
 ## 2. Dependencies
 
 Yup uses requirements.txt
 
-All dependencies must be disclosed and separated clearly. A 12-factor service never relies on system-wide packages and utilises a dependency separation technique to prevent system-wide packages from "leaking in" during execution. Arduino requirement is a good example. We may utilise a virtualenv environment to expressly separate the local app's environment from the global "site-packages" instals, which we can generate and use (source).
+All dependencies must be disclosed and separated clearly. A 12-factor service never relies on system-wide packages and utilises a dependency separation technique to prevent system-wide packages from "leaking in" during execution. Arduino requirement is a good example. We may utilise a virtual environment to expressly separate the local app's environment from the global "site-packages" installs, which we can generate and use (source).
 
 ```cpp
 #include <DNSServer.h> //https://github.com/espressif/arduino-esp32/tree/master/libraries/DNSServer
@@ -49,7 +39,7 @@ These are the hardware libraries we used in coming up with the hardware client.
 
 Yup, uses .env files
 
-Now since our board is wifi enabled, we need to store our wifi passwords and MQTT credentials before we are ready to publish them on GitHub.
+Now since our board is Wi-Fi enabled, we need to store our Wi-Fi passwords and MQTT credentials before we are ready to publish them on GitHub.
 
 If your code like this:
 ```cpp
@@ -106,9 +96,9 @@ For each secret, create an environment variable in your CI (or set it directly o
 
 BYOBacking service
 
-Any service that the app uses via the network as part of its usual functioning is referred to as a backing service. Databases, messaging/queuing systems, SMTP services for outgoing email, and caching systems are all examples.
+Any service the app uses via the network as part of its usual functioning is referred to as a backing service. Databases, messaging/queuing systems, SMTP services for outgoing email, and caching systems are all examples.
 
-The database and other backend services are often handled by the same systems administrators who install the app's runtime. The app may additionally include services offered and managed by third parties in addition to these locally controlled services. SMTP services (like Postmark), metrics-gathering services (like New Relic or Loggly), and binary asset services (like Amazon) are all examples.
+The database and other backend services are often handled by the same systems administrators who install the app's runtime. The app may additionally include services offered and managed by third parties in addition to locally controlled services. SMTP services (like Postmark), metrics-gathering services (like New Relic or Loggly), and binary asset services (like Amazon) are all examples.
 
 ### 1. RabbitMQ
 
@@ -119,7 +109,7 @@ image: mqtt-rabbitmq
 container_name: "mqtt"
 ```
 
-Sending IoT data to your backend server so as it can be processed and used by other services is a frequent chore for developers. Using Message Queue might be one of the solutions. RabbitMQ is a hybrid message queueing broker. It is hybrid in the sense that it supports many protocols such as AMQP, MQTT, and WebSockets. AMQP (Advanced Message Queueing Protocol) is a message-oriented middleware application layer protocol that is accessible to everybody. Message orientation, queuing, routing, dependability, and security are all characteristics of AMQP. MQTT (Message Queue Telemetry Transport) is a protocol for connecting to faraway sites with a minimal code footprint or low network capacity. AMQP is designed with more advanced features and has more overhead than MQTT. But in real-world application development, we may need AMQP like reliable message queue and also has lightweight devices to work with. Here is the point where RabbitMQ comes in. RabbitMQ has the flexibility to use both protocol AMQP & MQTT together.
+Sending IoT data to your backend server for processing and use by other services is a frequent chore for developers. Using Message Queue might be one of the solutions. RabbitMQ is a hybrid message queueing broker. It is hybrid in the sense that it supports many protocols such as AMQP, MQTT, and WebSockets. AMQP (Advanced Message Queueing Protocol) is a message-oriented middleware application layer protocol that is accessible to everybody. Message orientation, queuing, routing, dependability, and security are all characteristics of AMQP. MQTT (Message Queue Telemetry Transport) is a protocol for connecting to faraway sites with a minimal code footprint or low network capacity. AMQP is designed with more advanced features and has more overhead than MQTT. But in real-world application development, we may need AMQP like reliable message queue and also has lightweight devices to work with. RabbitMQ has the flexibility to use both protocol AMQP & MQTT together.
 
 ### 2. InfluxDB
 
@@ -207,30 +197,17 @@ Portainer's super-simple'opinionated' GUI makes it simple for anybody to get up 
 
 ## 5. Build, release, run
 
-Bugs. Downtime. Users are enraged.
+Bugs. 🐞 Downtime. Users are enraged.  Does this sound 👂 familiar? If this is the case, you 😊 may need to reconsider your release management approach. You can't afford to deliver half-baked releases in the fast-paced, ever-changing world of corporate IT. Nonetheless, changes in software or its surroundings cause an astounding 75% of problems. You must invest 🔝 in a strong release management strategy to avoid costly delays and keep your organization's operations operating.  From creation and testing to deployment, release management controls all stages of a software release. 😌 When a new product or updates to an existing product are sought, release management is necessary.  While release management methods vary and should be tailored to each business, 👩‍💼 there are five key stages to consider.  
 
-Does this sound familiar? If this is the case, you may need to reconsider your release management approach. You can't afford to deliver half-baked releases in the fast-paced, ever-changing world of corporate IT. Nonetheless, changes in software or its surroundings cause an astounding 75% of problems. You must invest in a strong release management strategy to avoid costly delays and keep your organization's operations operating.
+1. 1️⃣ Make a release plan: Planning takes the most time 🕐 because it involves structuring the complete release from beginning to end. A solid release strategy helps keep your team 👥 on schedule and guarantee that all standards and criteria are satisfied.
 
-From creation and testing to deployment, release management controls all stages of a software release. When a new product or updates to an existing product are sought, release management is necessary.
+2. Release of the build: After you've finalised the release 😌 strategy, you may begin designing and constructing the product for release. This is the product's real "development" based on the criteria specified in the release plan.  After you've fixed ✅ any issues that have arisen, it's time to put  the build through real-world scenario testing. This may need numerous iterations. As the team 👥 completes the product, it is delivered to a testing environment for user acceptance (typically automatically). This enables the team to discover any faults or difficulties that may emerge in a real-world scenario. As flaws are discovered, the build is returned to stage two for further development.  
 
-While release management methods vary and should be tailored to each business, there are five key stages to consider.
+3. 📊 Testing for user approval: 👏 User acceptance testing, often known as UAT, occurs when the product's intended users are allowed to use it and provide comments. This is frequently done as a free beta trial online or with a broader number of corporate workers.
 
-1. Make a release plan
-The planning step may take the most time because it is where your complete release is structured from beginning to end. A solid release strategy helps keep your team on schedule and guarantee that all standards and criteria are satisfied.
+4. 🕓 Create a press release: This stage involves putting the finishing touches on the product while keeping every feedback gathered during UAT in mind. A final quality check by the QA team is also part of the release preparation process.
 
-2. Release of the build
-After you've finalised the release strategy, you may begin designing and constructing the product for release. This is the product's real "development" based on the criteria specified in the release plan.
-
-After you've fixed any issues that have arisen, it's time to put the build through real-world scenario testing. This may need numerous iterations. As the team completes the product, it is delivered to a testing environment for user acceptance (typically automatically). This enables the team to discover any faults or difficulties that may emerge in a real-world scenario. As flaws are discovered, the build is returned to stage two for further development.
-
-3. Testing for user approval
-User acceptance testing, often known as UAT, occurs when the product's intended users are allowed to use it and provide comments. This is frequently done as a free beta trial online or with a broader number of corporate workers.
-
-4. Create a press release
-This stage involves putting the finishing touches on the product while keeping everything learnt during UAT in mind. A final quality check by the QA team is also part of the release preparation process.
-
-5. Roll out the release
-The big day has finally arrived, and this is where all of your team's hard work will be rewarded. It's time to let your product loose in the wilds of live production.
+5. 🔳 Roll out the release The big 😃 day has finally arrived, and this is where all of your team's hard work will 🔥 be rewarded. It's time to let your product loose in the wilds of live 🐙 production.
 
 
 https://d2slcw3kip6qmk.cloudfront.net/marketing/blog/2018Q4/devops-process-flow/ci-cd-process.png
@@ -239,10 +216,14 @@ https://d2slcw3kip6qmk.cloudfront.net/marketing/blog/2018Q4/devops-process-flow/
 
 Thanks, Docker!
 
-A 12-factor application operates as one or more stateless processes that share nothing and maybe partitioned horizontally. All data that has to be saved must be backed up by a stateful service, which is generally a database. This means no in-memory or local disk-based caches, as well as no sticky sessions. Instead of demonizing or writing their own PID files, these processes should rely on the execution environment's process management (such as Upstart).
+A 12-factor application operates as one or more stateless processes that share nothing and maybe partitioned horizontally. All data that has to be saved must be backed up to a stateful service, which is generally a database. This means no in-memory or local disk-based caches, as well as no sticky sessions. Instead of demonizing or writing their own PID files, these processes should rely on the execution environment's process management (such as Upstart).
 This aspect must be taken into account right from the start, in conjunction with the talks on antifragility, horizontal scaling, and overall application architecture. We've already achieved this goal because the sample app delegated all stateful persistence to a database.
 
 It's worth noting, though, that utilising the normal Ubuntu base image for Docker has resulted in several problems, one of which being process management (or lack thereof). Check out base image-docker if you want to utilise a process manager to automatically restart crashed daemons or alert a service registry or operations team. This image provides a unit for process management and supervision, as well as additional enhancements to basic Ubuntu for Docker use, such as the removal of the requirement for PID files.
+
+## Acknowledgment
+1. [Kelvin Gitu](https://twitter.com/GituKelvin/)
+
 
 ## References
 1. https://www.pluralsight.com/guides/download-large-files-from-remote-servers-using-nginx-docker
