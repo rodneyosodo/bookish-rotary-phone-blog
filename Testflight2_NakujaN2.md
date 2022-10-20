@@ -1,5 +1,7 @@
 # Avionics report
 
+###### tags: `nakuja`
+
 As we are the brains of the rocket we have some tasks we want to achieve at the end of each launch:
 
 - Log flight data
