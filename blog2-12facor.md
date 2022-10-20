@@ -1,4 +1,6 @@
-# Blog 2 Describing the hardware
+# Blog 2 IoT hardware for a 12 factor application
+
+###### tags: `blogs`
 
 ## Introduction
 
@@ -498,3 +500,4 @@ The whole code can be found [here](https://github.com/JKUATSES/2021-project-hack
 
 1. [Kelvin Gitu](https://twitter.com/GituKelvin/)
 2. [Washington Kamadi](https://github.com/WashingtonKK/)
+3. [Calvin Mwadime](https://twitter.com/MwadimeCalvin)
