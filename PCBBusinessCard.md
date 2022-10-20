@@ -1,5 +1,7 @@
 # Business card PCB
 
+###### tags: `threads`
+
 I was playing around with PCB layers and found myself designing a PCB business card. I have never been this eager to get PCB boards like this time.
 
 Here are the front and backside of how the PCB looks like
