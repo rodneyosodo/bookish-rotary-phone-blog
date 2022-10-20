@@ -2,6 +2,7 @@
 
 # Simulating molecules(LiH) using VQE
 
+###### tags: `blogs`
 
 ###### Qiskit Summer School Final Project: Designing your implementation of a variational quantum eigensolver (VQE) algorithm that simulates the ground state energy of the Lithium Hydride (LiH) molecule.
 
